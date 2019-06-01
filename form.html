@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  float: right;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #f18973;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 50px;
+}
+</style>
+</head>
+<body>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">Your Name</label>
+    <input type="text" id="fname" pattern=".{1,}" name="firstname" placeholder="Your name">
+    
+    <label for="email">E-mail</label>
+    <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Your email(jkhatter@ryersom.ca)">    
+    
+    <label for="lname">User Name</label>
+    <input type="text" id="lname" name="lastname" pattern=".{1,}" placeholder="Your Username">    
+
+    <label for="country">Province</label>
+    <select id="country" name="country">
+      <option value="new-brunswick">New Brunswick</option>
+      <option value="ontario">Ontario</option>
+      <option value="british-columbia">British Columbia</option>
+      <option value="quebec">Quebec</option>
+      <option value="Nova-Scotia">Nova Scotia</option>
+      <option value="saskatchewan">Saskatchewan</option>
+      <option value="manitoba">Manitoba</option>
+      <option value="alberta">Alberta</option>
+      <option value="newfoundlandandlabrador">Newfoundland and Labrador</option>
+    </select>
+    
+    <label for="pcode">Postal Code</label>
+    <input type="text" id="pcode" name="pcode" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="Your postalcode(l5A 3X1) ">    
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
